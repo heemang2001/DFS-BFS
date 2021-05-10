@@ -32,7 +32,10 @@ int solution(vector<int> numbers, int target)
 
 int main()
 {
-	cout << solution({ 1,1,1,1,1 }, 3) << '\n';
+	cout << solution({ 1,1,1,1,1 }, 3) << '\n'; // 5	
+
+	answer = 0;
+	cout << solution({ 1,2,1,2 }, 2) << '\n';	// 3
 
 	return 0;
 }
