@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\동빈나">
       <UniqueIdentifier>{39c56158-fe0f-452a-8ce0-99576f090111}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\프로그래머스">
+      <UniqueIdentifier>{834c96f7-c340-4f7a-96f0-7270b2aea1cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="음료수 얼려 먹기.cpp">
@@ -23,6 +26,9 @@
     </ClCompile>
     <ClCompile Include="미로 탈출.cpp">
       <Filter>소스 파일\동빈나</Filter>
+    </ClCompile>
+    <ClCompile Include="타겟 넘버.cpp">
+      <Filter>소스 파일\프로그래머스</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
