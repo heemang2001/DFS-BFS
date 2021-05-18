@@ -20,7 +20,7 @@ bool dfs(int n, vector<vector<int>>& computers)
 	for (int i = 0; i < computers.size(); i++)
 	{
 		// 연결된 노드가 있다면 재귀
-		if (computers[n][i])
+		if (computers[n][i] == 1)
 		{
 			dfs(i, computers);
 		}
