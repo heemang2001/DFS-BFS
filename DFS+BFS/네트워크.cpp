@@ -25,6 +25,8 @@ bool dfs(int n, vector<vector<int>>& computers)
 			dfs(i, computers);
 		}
 	}
+
+	return true;
 }
 
 int solution(int n, vector<vector<int>> computers)
