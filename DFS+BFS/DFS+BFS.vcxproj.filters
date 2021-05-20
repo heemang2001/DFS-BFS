@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\프로그래머스">
       <UniqueIdentifier>{834c96f7-c340-4f7a-96f0-7270b2aea1cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\백준">
+      <UniqueIdentifier>{34290e44-1036-4ab4-8b7b-da41020c441b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="음료수 얼려 먹기.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="단어 변환.cpp">
       <Filter>소스 파일\프로그래머스</Filter>
+    </ClCompile>
+    <ClCompile Include="단지번호붙이기.cpp">
+      <Filter>소스 파일\백준</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
