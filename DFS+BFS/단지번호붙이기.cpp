@@ -14,7 +14,6 @@ vector<int> vecCount;
 
 void dfs(int x, int y)
 {	
-
 	if (x < 0 || x >= N || y < 0 || y >= N)
 	{
 		return;
