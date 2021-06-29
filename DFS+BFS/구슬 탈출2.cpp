@@ -9,6 +9,7 @@ int N, M;
 int answer = 123123123;
 char Map[10][10];
 
+// ©Л, аб, го, ╩С
 int dx[] = { 0,0,1,-1 };
 int dy[] = { 1,-1,0,0 };
 
@@ -155,6 +156,7 @@ void Move(int Rx, int Ry, int Bx, int By, int Cnt, int dir)
 			continue;
 		}
 
+		// ©Л, аб, го, ╩С
 		Move(nRx, nRy, nBx, nBy, Cnt + 1, i);
 	}
 }
