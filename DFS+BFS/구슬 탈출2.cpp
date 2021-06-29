@@ -75,6 +75,10 @@ void Move(int Rx, int Ry, int Bx, int By, int Cnt, int dir)
 		nRy = nRy + dy[dir];
 	}
 
+	// 벽을 만났으므로 반대방향으로 1칸이동
+	nRx = nRx - dx[dir];
+	nRy = nRy - dy[dir];
+
 	// 파랑 구슬 이동
 	int nBx = Bx + dx[dir];
 	int nBy = By + dy[dir];
@@ -94,6 +98,8 @@ void Move(int Rx, int Ry, int Bx, int By, int Cnt, int dir)
 		nBx = nBx + dx[dir];
 		nBy = nBy + dy[dir];
 	}
+
+	// 벽을 만났으므로 반대방향으로 1칸이동
 	nBx = nBx - dx[dir];
 	nBy = nBy - dy[dir];
 
@@ -133,6 +139,7 @@ void Move(int Rx, int Ry, int Bx, int By, int Cnt, int dir)
 			nBy = nBy - dy[dir];
 		}
 	}
+
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -178,6 +185,7 @@ int main()
 		}
 	}
 
+	// 우, 좌, 하, 상
 	for (int i = 0; i < 4; i++)
 	{
 		int x = Red.first;
