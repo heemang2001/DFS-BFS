@@ -141,7 +141,6 @@ void Move(int Rx, int Ry, int Bx, int By, int Cnt, int dir)
 		}
 	}
 
-
 	for (int i = 0; i < 4; i++)
 	{
 		// 이동할 방향이 현재 방향과 같다면 continue
