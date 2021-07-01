@@ -15,8 +15,6 @@ int dy[] = { 0,0,-1,1 };
 
 void BFS(int x, int y, vector<vector<int>>& vecMap)
 {
-	int cnt = 0;	
-
 	queue<pair<int, int>> q;
 	q.push({ x,y });
 
