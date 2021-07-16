@@ -78,5 +78,8 @@
     <ClCompile Include="배수.cpp">
       <Filter>소스 파일\코드업</Filter>
     </ClCompile>
+    <ClCompile Include="캔디팡.cpp">
+      <Filter>소스 파일\코드업</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
