@@ -18,13 +18,16 @@ void DFS(int num)
 {
 	vecVisited[num] = true;
 
+	// 정점에 연결된 수 만큼
 	for (int i = 0; i < vecGraph[num].size(); i++)
 	{
+		// first == 다음 정점
 		if (vecVisited[vecGraph[num][i].first])
 		{
 			continue;
 		}
 
+		// second == USADO 수치
 		if (vecGraph[num][i].second >= K)
 		{
 			answer++;
