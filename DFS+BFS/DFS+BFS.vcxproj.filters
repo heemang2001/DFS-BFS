@@ -126,5 +126,8 @@
     <ClCompile Include="케빈 베이컨의 6단계 법칙.cpp">
       <Filter>소스 파일\백준</Filter>
     </ClCompile>
+    <ClCompile Include="숫자고르기.cpp">
+      <Filter>소스 파일\백준</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

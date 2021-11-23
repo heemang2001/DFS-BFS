@@ -43,7 +43,7 @@ int main()
 		while (!q.empty())
 		{
 			int cur_Num = q.front().first;
-			int next_Num = q.front().second + 1;
+			int next_Layer = q.front().second + 1;
 			q.pop();
 
 			for (int j = 1; j <= N; j++)
@@ -51,8 +51,8 @@ int main()
 				if (Friends[cur_Num][j] == 1 && !bVisited[j])
 				{
 					bVisited[j] = true;
-					q.push({ j,next_Num });
-					sum += next_Num;
+					q.push({ j,next_Layer });
+					sum += next_Layer;
 				}
 			}
 		}
