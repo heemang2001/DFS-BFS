@@ -8,16 +8,30 @@ using namespace std;
 int R, C;
 int cnt_Sheep;
 int cnt_Wolf;
+int cnt_TempSheep;
+int cnt_TempWolf;
 
 int dx[] = { -1,1,0,0 };
 int dy[] = { 0,0,-1,1 };
 bool bVisited[251][251];
+
+vector<pair<int, int>> vecAnimal;
 
 void DFS(int x, int y, vector<string>& vecStr)
 {
 	if (vecStr[x][y] == '#')
 	{
 		return;
+	}
+
+	else if (vecStr[x][y] == 'o')
+	{
+		cnt_TempSheep++;
+	}
+
+	else if (vecStr[x][y] == 'v')
+	{
+		cnt_TempWolf++;
 	}
 
 	bVisited[x][y] = true;
@@ -47,9 +61,6 @@ int main()
 		vecStr.push_back(sTemp);
 	}
 
-	vector<pair<int, int>> vecSheep;
-	vector<pair<int, int>> vecWolf;
-
 	for (int i = 0; i < vecStr.size(); i++)
 	{
 		for (int j = 0; j < vecStr[i].size(); j++)
@@ -57,21 +68,36 @@ int main()
 			// 양이면
 			if (vecStr[i][j] == 'o')
 			{
-				vecSheep.push_back({ i,j });
+				vecAnimal.push_back({ i,j });
 			}
 
 			// 늑대면
 			else if(vecStr[i][j] == 'v')
 			{
-				vecWolf.push_back({ i,j });
+				vecAnimal.push_back({ i,j });
 			}
 		}
 	}
 
-	cnt_Sheep = vecSheep.size();
-	cnt_Wolf = vecWolf.size();
+	for (int i = 0; i < vecAnimal.size(); i++)
+	{
+		if (bVisited[vecAnimal[i].first][vecAnimal[i].second] == false)
+		{
+			cnt_TempSheep = 0;
+			cnt_TempWolf = 0;
+			DFS(vecAnimal[i].first, vecAnimal[i].second, vecStr);
 
+			if (cnt_TempSheep > cnt_TempWolf)
+			{
+				cnt_Sheep += cnt_TempSheep;
+			}
 
+			else
+			{
+				cnt_Wolf += cnt_TempWolf;
+			}
+		}
+	}
 
 	cout << cnt_Sheep << " " << cnt_Wolf;
 
